@@ -1,9 +1,8 @@
 package com.example.hostelmanagementsystem.Service;
 
 import com.example.hostelmanagementsystem.Canteen;
-import com.example.hostelmanagementsystem.CanteenRepository;
+import com.example.hostelmanagementsystem.Repository.CanteenRepository;
 import com.example.hostelmanagementsystem.ResourceNotFoundException;
-import net.bytebuddy.implementation.bytecode.Throw;
 import org.springframework.stereotype.Service;
 
 @Service

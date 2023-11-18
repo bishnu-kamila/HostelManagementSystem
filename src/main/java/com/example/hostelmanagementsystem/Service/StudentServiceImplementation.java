@@ -1,7 +1,7 @@
 package com.example.hostelmanagementsystem.Service;
 
 import com.example.hostelmanagementsystem.ResourceNotFoundException;
-import com.example.hostelmanagementsystem.StudentRepository;
+import com.example.hostelmanagementsystem.Repository.StudentRepository;
 import com.example.hostelmanagementsystem.Students;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

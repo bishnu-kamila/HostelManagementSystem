@@ -1,7 +1,7 @@
 package com.example.hostelmanagementsystem.Service;
 
 import com.example.hostelmanagementsystem.Admin;
-import com.example.hostelmanagementsystem.AdminRepository;
+import com.example.hostelmanagementsystem.Repository.AdminRepository;
 import com.example.hostelmanagementsystem.ResourceNotFoundException;
 import org.springframework.stereotype.Service;
 
