@@ -42,6 +42,8 @@ public class StudentServiceImplementation implements StudentService{
     @Override
     public Students updateStudentById(Students std, Long id) {
         Students existingStudent = studentRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Students","Id","id"));
+        existingStudent.setRegdNo(std.getRegdNo());
+        existingStudent.setPassword(std.getPassword());
         existingStudent.setFirstName(std.getFirstName());
         existingStudent.setLastName(std.getLastName());
         existingStudent.seteMail(std.geteMail());

@@ -12,6 +12,10 @@ public class Wardens {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long empId;
+    @Column(name = "regd_id")
+    private String regdId;
+    @Column(name = "password")
+    private String password;
     @Column(name = "first_name", nullable = false)
     private String firstName;
     @Column(name = "last_name")
@@ -29,6 +33,22 @@ public class Wardens {
 
     public void setEmpId(Long empId) {
         this.empId = empId;
+    }
+
+    public String getRegdId() {
+        return regdId;
+    }
+
+    public void setRegdId(String regdId) {
+        this.regdId = regdId;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getFirstName() {

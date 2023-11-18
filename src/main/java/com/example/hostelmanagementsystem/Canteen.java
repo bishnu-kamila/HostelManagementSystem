@@ -11,6 +11,10 @@ public class Canteen {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long canteenId;
+    @Column(name = "regd_id")
+    private String regdId;
+    @Column(name = "password")
+    private String password;
     @Column(name = "canteen_Name")
     private String canteenName;
     @Column(name = "owner_Name")
@@ -28,6 +32,22 @@ public class Canteen {
 
     public void setCanteenId(Long canteenId) {
         this.canteenId = canteenId;
+    }
+
+    public String getRegdId() {
+        return regdId;
+    }
+
+    public void setRegdId(String regdId) {
+        this.regdId = regdId;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getCanteenName() {

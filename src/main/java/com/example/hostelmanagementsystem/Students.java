@@ -3,6 +3,7 @@ package com.example.hostelmanagementsystem;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.math.BigInteger;
 
 @Data
 @Entity
@@ -11,6 +12,10 @@ public class Students {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column(name = "regd_no",nullable = false)
+    private BigInteger regdNo;
+    @Column(name = "password")
+    private String password;
     @Column(name = "first_name",nullable = false)
     private String firstName;
     @Column(name = "last_name")
@@ -43,6 +48,22 @@ public class Students {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public BigInteger getRegdNo() {
+        return regdNo;
+    }
+
+    public void setRegdNo(BigInteger regdNo) {
+        this.regdNo = regdNo;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getFirstName() {
