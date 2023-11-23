@@ -22,8 +22,8 @@ public class Wardens {
     private String lastName;
     @Column(name = "gender")
     private String gender;
-    @Column(name = "e_mail")
-    private String email;
+    @Column(name = "e_Mail")
+    private String eMail;
     @Column(name = "hostel_no")
     private int hostelNo;
 
@@ -75,12 +75,12 @@ public class Wardens {
         this.gender = gender;
     }
 
-    public String getEmail() {
-        return email;
+    public String geteMail() {
+        return eMail;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void seteMail(String eMail) {
+        this.eMail = eMail;
     }
 
     public int getHostelNo() {

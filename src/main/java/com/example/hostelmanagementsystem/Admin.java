@@ -15,7 +15,7 @@ public class Admin {
     @Column(name = "e_Mail")
     private String eMail;
     @Column(name = "password")
-    private String Password;
+    private String password;
 
     public long getId() {
         return id;
@@ -34,10 +34,10 @@ public class Admin {
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
 
     public void setPassword(String password) {
-        Password = password;
+        this.password = password;
     }
 }

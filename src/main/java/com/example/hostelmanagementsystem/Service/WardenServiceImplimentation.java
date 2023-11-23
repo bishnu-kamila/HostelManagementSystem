@@ -45,7 +45,7 @@ public class WardenServiceImplimentation implements WardenService{
         Wardens existingWarden = hostelWarden.findById(id).orElseThrow(()-> new ResourceNotFoundException("Wardens","Id","id"));
         existingWarden.setFirstName(wdn.getFirstName());
         existingWarden.setLastName(wdn.getLastName());
-        existingWarden.setEmail(wdn.getEmail());
+        existingWarden.seteMail(wdn.geteMail());
         existingWarden.setGender(wdn.getGender());
         existingWarden.setHostelNo(wdn.getHostelNo());
         hostelWarden.save(existingWarden);

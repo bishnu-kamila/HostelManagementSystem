@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.persistence.Id;
 
 @RestController
-@RequestMapping("/api/admin")
+@CrossOrigin(origins = "http://localhost:3000/")
 public class AdminController {
 
     private AdminService adminService;
@@ -20,12 +20,12 @@ public class AdminController {
         this.adminService = adminService;
     }
 
-    @PostMapping
+    @PostMapping("/saveAdmin")
     public ResponseEntity<Admin> saveAdmin(@RequestBody Admin admin){
         return new ResponseEntity<Admin>(adminService.saveAdmin(admin), HttpStatus.CREATED);
     }
 
-    @DeleteMapping("{id}")
+    @GetMapping("/deletyeAdmin/{id}")
     public ResponseEntity<String>DeleteAdmin(@RequestBody String Admin , @PathVariable("id") long adm){
         adminService.deleteAdminById(Admin,adm);
         return new ResponseEntity<String>("Deleted Successfully",HttpStatus.OK);

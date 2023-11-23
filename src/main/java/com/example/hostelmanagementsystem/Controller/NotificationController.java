@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/notification")
+@CrossOrigin(origins = "http://localhost:3000/")
 public class NotificationController {
     NotificationService notificationService;
 
@@ -19,28 +19,28 @@ public class NotificationController {
     public NotificationController(NotificationService notificationService) {
         this.notificationService = notificationService;
     }
-    @PostMapping
+    @PostMapping("/upload")
     public ResponseEntity<Notification>saveNotification(@RequestBody Notification notification){
         return new ResponseEntity<Notification>(notificationService.saveNotification(notification), HttpStatus.CREATED);
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public List<Notification>getAll(){
         return notificationService.getAll();
     }
 
-    @GetMapping("{id}")
+    @GetMapping("notificationfetchby/{id}")
     public ResponseEntity<Notification>getById(@PathVariable  ("id") Long notid){
         return new ResponseEntity<Notification>(notificationService.getNotificationById(notid),HttpStatus.OK);
     }
 
-    @PutMapping("{id}")
+    @PutMapping("notificationupdate/{id}")
     public ResponseEntity<String>UpdateNotification(@RequestBody Notification notification , @PathVariable ("id") Long notific){
         notificationService.updateNotification(notification , notific);
         return new ResponseEntity<String>("Notification Successfully updated",HttpStatus.OK);
     }
 
-    @DeleteMapping("{id}")
+    @DeleteMapping("/notificationdelete/{id}")
     public ResponseEntity<String> deleteNotific(@RequestBody String notification , @PathVariable ("id") Long notifion){
         notificationService.deleteNotification(notification ,notifion );
         return new ResponseEntity<String >("Notification Deleted Successfully",HttpStatus.OK);

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/wardens")
+@CrossOrigin(origins = "http://localhost:3000/")
 public class WardenController {
     private WardenService wardenService;
 
@@ -18,20 +18,20 @@ public class WardenController {
     public WardenController(WardenService wardenService) {
         this.wardenService = wardenService;
     }
-    @PostMapping
+    @PostMapping("/wardenregister")
     private ResponseEntity<Wardens> saveWrdn(@RequestBody Wardens wardens){
         return new ResponseEntity<Wardens>(wardenService.saveWarden(wardens), HttpStatus.CREATED);
     }
-    @GetMapping
+    @GetMapping("/al")
     public List<Wardens>getAllWdn(){
         return wardenService.getAll();
     }
-    @GetMapping("{id}")
+    @GetMapping("/getwarden/{id}")
     public ResponseEntity<Wardens>getWdnById(@PathVariable ("id") long wdnid){
         return new ResponseEntity<Wardens>(wardenService.getWardenById(wdnid),HttpStatus.OK);
     }
 
-    @PutMapping("{id}")
+    @PutMapping("/warden/{id}")
     public ResponseEntity<String>updateById(@RequestBody Wardens wardens ,@PathVariable("id") Long wdnid){
         wardenService.updateWarden(wardens,wdnid);
         return new ResponseEntity<String>("Updated",HttpStatus.OK);

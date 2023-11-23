@@ -13,7 +13,7 @@ public class Students {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @Column(name = "regd_no",nullable = false)
-    private BigInteger regdNo;
+    private String regdNo;
     @Column(name = "password")
     private String password;
     @Column(name = "first_name",nullable = false)
@@ -50,11 +50,11 @@ public class Students {
         this.id = id;
     }
 
-    public BigInteger getRegdNo() {
+    public String getRegdNo() {
         return regdNo;
     }
 
-    public void setRegdNo(BigInteger regdNo) {
+    public void setRegdNo(String regdNo) {
         this.regdNo = regdNo;
     }
 
