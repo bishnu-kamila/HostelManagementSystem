@@ -1,8 +1,6 @@
 package com.example.hostelmanagementsystem.Service;
 
-import com.example.hostelmanagementsystem.Admin;
-
-import javax.persistence.Id;
+import com.example.hostelmanagementsystem.Model.Admin;
 
 public interface AdminService {
 

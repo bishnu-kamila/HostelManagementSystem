@@ -1,6 +1,6 @@
 package com.example.hostelmanagementsystem.Service;
 
-import com.example.hostelmanagementsystem.Laundry;
+import com.example.hostelmanagementsystem.Model.Laundry;
 import com.example.hostelmanagementsystem.Repository.LaundryRepository;
 import com.example.hostelmanagementsystem.ResourceNotFoundException;
 import org.springframework.stereotype.Service;

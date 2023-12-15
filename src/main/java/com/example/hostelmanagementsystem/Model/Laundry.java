@@ -1,4 +1,4 @@
-package com.example.hostelmanagementsystem;
+package com.example.hostelmanagementsystem.Model;
 
 import lombok.Data;
 
@@ -11,7 +11,11 @@ public class Laundry {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "laundry_name",nullable = false)
+    @Column(name = "laundry_Id",nullable = false)
+    private String laundryId;
+    @Column(name = "password")
+    private String password;
+    @Column(name = "laundry_Name")
     private String laundryName;
     @Column(name = "owner_name")
     private String ownerName;
@@ -20,14 +24,28 @@ public class Laundry {
     @Column(name = "laundry_type")
     private String laundryType;
 
-
-
     public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getLaundryId() {
+        return laundryId;
+    }
+
+    public void setLaundryId(String laundryId) {
+        this.laundryId = laundryId;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getLaundryName() {

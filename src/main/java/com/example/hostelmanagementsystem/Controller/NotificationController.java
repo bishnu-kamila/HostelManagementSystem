@@ -1,6 +1,6 @@
 package com.example.hostelmanagementsystem.Controller;
 
-import com.example.hostelmanagementsystem.Notification;
+import com.example.hostelmanagementsystem.Model.Notification;
 import com.example.hostelmanagementsystem.Service.NotificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000/")
@@ -24,7 +23,7 @@ public class NotificationController {
         return new ResponseEntity<Notification>(notificationService.saveNotification(notification), HttpStatus.CREATED);
     }
 
-    @GetMapping("/all")
+    @GetMapping("/allnot")
     public List<Notification>getAll(){
         return notificationService.getAll();
     }

@@ -1,8 +1,7 @@
 package com.example.hostelmanagementsystem.Service;
 
-import com.example.hostelmanagementsystem.Notification;
+import com.example.hostelmanagementsystem.Model.Notification;
 
-import javax.persistence.Id;
 import java.util.List;
 
 public interface NotificationService {

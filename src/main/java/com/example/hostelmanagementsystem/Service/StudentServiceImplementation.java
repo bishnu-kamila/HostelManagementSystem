@@ -2,7 +2,7 @@ package com.example.hostelmanagementsystem.Service;
 
 import com.example.hostelmanagementsystem.ResourceNotFoundException;
 import com.example.hostelmanagementsystem.Repository.StudentRepository;
-import com.example.hostelmanagementsystem.Students;
+import com.example.hostelmanagementsystem.Model.Students;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -56,6 +56,7 @@ public class StudentServiceImplementation implements StudentService{
         existingStudent.setDepartment(std.getDepartment());
         existingStudent.setCourse(std.getCourse());
         existingStudent.setHostelType(std.getHostelType());
+        existingStudent.setRoomNo(std.getRoomNo());
         studentRepository.save(existingStudent);
         return existingStudent;
     }

@@ -1,7 +1,7 @@
 package com.example.hostelmanagementsystem.Controller;
 
 import com.example.hostelmanagementsystem.Service.WardenService;
-import com.example.hostelmanagementsystem.Wardens;
+import com.example.hostelmanagementsystem.Model.Wardens;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

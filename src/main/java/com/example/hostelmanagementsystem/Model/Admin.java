@@ -1,4 +1,4 @@
-package com.example.hostelmanagementsystem;
+package com.example.hostelmanagementsystem.Model;
 
 import lombok.Data;
 

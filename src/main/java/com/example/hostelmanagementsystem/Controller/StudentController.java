@@ -1,7 +1,7 @@
 package com.example.hostelmanagementsystem.Controller;
 
 import com.example.hostelmanagementsystem.Service.StudentService;
-import com.example.hostelmanagementsystem.Students;
+import com.example.hostelmanagementsystem.Model.Students;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 
 @CrossOrigin(origins = "http://localhost:3000/")
+
 public class StudentController {
     private StudentService studentService;
 
@@ -20,7 +21,7 @@ public class StudentController {
         this.studentService = studentService;
     }
     @PostMapping("/register")
-    public ResponseEntity<Students> saveEmployee(@RequestBody Students students){
+    public ResponseEntity<Students> saveStudent(@RequestBody Students students){
         return new ResponseEntity<Students>(studentService.saveStudent(students), HttpStatus.CREATED);
     }
     @GetMapping("/")

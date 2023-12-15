@@ -1,6 +1,6 @@
 package com.example.hostelmanagementsystem.Service;
 
-import com.example.hostelmanagementsystem.Students;
+import com.example.hostelmanagementsystem.Model.Students;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package com.example.hostelmanagementsystem.Service;
 
-import com.example.hostelmanagementsystem.Notification;
+import com.example.hostelmanagementsystem.Model.Notification;
 import com.example.hostelmanagementsystem.Repository.NotificationRepository;
 import com.example.hostelmanagementsystem.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;

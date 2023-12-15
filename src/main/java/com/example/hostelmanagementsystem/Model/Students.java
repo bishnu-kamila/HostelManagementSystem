@@ -1,4 +1,4 @@
-package com.example.hostelmanagementsystem;
+package com.example.hostelmanagementsystem.Model;
 
 import lombok.Data;
 
@@ -40,6 +40,8 @@ public class Students {
     private String course;
     @Column(name = "hostel_type")
     private String hostelType;
+    @Column(name = "room_No")
+    private String roomNo;
 
 
     public long getId() {
@@ -160,5 +162,13 @@ public class Students {
 
     public void setHostelType(String hostelType) {
         this.hostelType = hostelType;
+    }
+
+    public String getRoomNo() {
+        return roomNo;
+    }
+
+    public void setRoomNo(String roomNo) {
+        this.roomNo = roomNo;
     }
 }

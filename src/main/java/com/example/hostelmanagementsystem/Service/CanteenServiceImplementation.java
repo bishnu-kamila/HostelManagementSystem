@@ -1,9 +1,11 @@
 package com.example.hostelmanagementsystem.Service;
 
-import com.example.hostelmanagementsystem.Canteen;
+import com.example.hostelmanagementsystem.Model.Canteen;
 import com.example.hostelmanagementsystem.Repository.CanteenRepository;
 import com.example.hostelmanagementsystem.ResourceNotFoundException;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class CanteenServiceImplementation implements CanteenService{
@@ -18,6 +20,11 @@ public class CanteenServiceImplementation implements CanteenService{
     @Override
     public Canteen saveCanteen(Canteen canteen) {
         return canteenRepository.save(canteen);
+    }
+
+    @Override
+    public List<Canteen> getAll() {
+        return canteenRepository.findAll();
     }
 
     @Override
