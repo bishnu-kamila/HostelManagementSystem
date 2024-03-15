@@ -8,7 +8,7 @@ We can improve the efficiency of the system,thus overcome the drawbacks of the e
 . Less human error <br>
 · Strength and strain of manual labour can be reduced <br>
 · High security <br>
-· Data redundancy can be avoided to some extent <br>
+· Data redundancy can be avoided to  some extent <br>
 · Data consistency <br>
 · Easy to handle <br>
 · Easy data updating <br>
