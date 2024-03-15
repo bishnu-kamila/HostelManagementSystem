@@ -1,0 +1,46 @@
+// AdminPage.js
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+
+const StudentPageContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: lightgreen; /* Add this line for the background color */
+`;
+
+const Card = styled.div`
+  width: 200px;
+  height: 150px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+`;
+
+const StudentHomePage = () => {
+  return (
+    <StudentPageContainer>
+      <Card>
+        <Link to="/addApplication"><h3>Send Application</h3></Link>
+      </Card>
+      <Card>
+        <Link to="/showStudentToStudent"><h3>Check Room No</h3></Link>
+      </Card>
+      <Card>
+        <Link to="/foodAllowence"><h3>Food Allowance</h3></Link>
+      </Card>
+      <Card>
+        <Link to="/showNotificationToStudent"><h3>All Notifications</h3></Link>
+      </Card>
+      <Card>
+        <Link to="/laundryOrder"><h3>Book for Laundry</h3></Link>
+      </Card>
+    </StudentPageContainer>
+  );
+};
+
+export default StudentHomePage;
